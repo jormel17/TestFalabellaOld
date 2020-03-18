@@ -1,0 +1,88 @@
+{
+	"info": {
+		"_postman_id": "03185310-5658-4c5f-b9b2-36d6fa8861bc",
+		"name": "SecondTest",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "https://restcountries.eu/rest/v2/name/suriname",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "4db31406-05a2-476d-9c65-cb2abc064e42",
+						"exec": [
+							"",
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"",
+							"pm.test(\"Response time is less than 200ms\", function () {",
+							"    pm.expect(pm.response.responseTime).to.be.below(500);",
+							"});",
+							"",
+							"",
+							"pm.test(\"Status code name has string\", function () {",
+							"    pm.response.to.have.status(\"OK\");",
+							"});",
+							"",
+							"pm.test(\"validate body exists\", function () {",
+							"    pm.response.to.be.withBody;",
+							"});",
+							"",
+							"  ",
+							"pm.test(\"Validate json format\", function () {",
+							"    pm.response.to.be.json;",
+							"});",
+							"",
+							"",
+							"pm.test(\"Body matches string\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"name\");",
+							"    pm.expect(pm.response.text()).to.include(\"alpha2Code\");",
+							"    pm.expect(pm.response.text()).to.include(\"capital\");",
+							"    pm.expect(pm.response.text()).to.include(\"region\");",
+							"    pm.expect(pm.response.text()).to.include(\"subregion\");",
+							"    pm.expect(pm.response.text()).to.include(\"population\");",
+							"    pm.expect(pm.response.text()).to.include(\"demonym\");",
+							"    pm.expect(pm.response.text()).to.include(\"borders\");",
+							"    pm.expect(pm.response.text()).to.include(\"nativeName\");",
+							"    pm.expect(pm.response.text()).to.include(\"numericCode\");",
+							"    pm.expect(pm.response.text()).to.include(\"languages\");",
+							"    pm.expect(pm.response.text()).to.include(\"translations\");",
+							"    pm.expect(pm.response.text()).to.include(\"acronym\");",
+							"    pm.expect(pm.response.text()).to.include(\"otherNames\");",
+							"});",
+							"",
+							"pm.test(\"Content-Type header is present\", function () {",
+							"    pm.response.to.have.header(\"Content-Type\");",
+							"})"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://restcountries.eu/rest/v2/name/suriname",
+					"protocol": "https",
+					"host": [
+						"restcountries",
+						"eu"
+					],
+					"path": [
+						"rest",
+						"v2",
+						"name",
+						"suriname"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
