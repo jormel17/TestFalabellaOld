@@ -14,19 +14,6 @@ function  Producto (a,b){
 console.log(Producto(2,5));  //el resultado es 200
 
 //Test3//
-
-/*function Persona (nombre, apellido, telefono, email){
-    this.nombre = nombre;
-    this.apellido = apellido;
-    this. telefono = telefono;
-    this.email = email;
-
-}
-var ObjePersona = new Persona ("Juan", "Perez", "900199703", "juan.perez@gmail.com");
-
-console.log (ObjePersona);*/
-
-
 var Persona = {
     nombre: "Juan",
     apellido: "Perez",
@@ -36,3 +23,4 @@ var Persona = {
 function ObjPersona(){return Persona;}
 
 console.log(ObjPersona().nombre, ObjPersona().apellido, ObjPersona().telefono, ObjPersona().email);
+
